@@ -4,6 +4,7 @@ if (isset($_POST['stock_id']) && isset($_POST['tag_no'])) {
     $stock_id = $_POST['stock_id'];
     $tag_no = $_POST['tag_no'];
     $serial_no = $_POST['serial_no'];
+    $Remark = $_POST['Remark'];
     $Date = $_POST['Date'];
     $checked_by = $_POST['checked_by'];
     $board_serial = $_POST['board_serial'];
@@ -11,12 +12,12 @@ if (isset($_POST['stock_id']) && isset($_POST['tag_no'])) {
     include "../db_conn.php";
 
     if (isset($_POST['Date']) && empty($_POST['Date'])) {
-      header("Location: ../index.php?error=Date is required.");
+      header("Location: ../Add.php?error=Date is required.");
       exit;
   }
 
     if (isset($_POST['serial_no']) && empty($_POST['serial_no'])) {
-        header("Location: ../index.php?error=Serial number is required.");
+        header("Location: ../Add.php?error=Serial number is required.");
         exit;
     } else {
         $Shutter = (isset($_POST['Shutter'])) ? "Yes" : "No";
@@ -27,24 +28,24 @@ if (isset($_POST['stock_id']) && isset($_POST['tag_no'])) {
         $Motor = (isset($_POST['Motor'])) ? "Yes" : "No";
         $plastic_cover = (isset($_POST['plastic_cover'])) ? "Yes" : "No";
 
-        // Add other variables as needed...
+        // index.php other variables as needed...
 
         $sql = "INSERT INTO reciving (stock_id, tag_no, serial_no, Shutter, Chipset, Roller, 
-                                      Track, Prehead, Motor, plastic_cover, Date, checked_by, board_serial) 
+                                      Track, Prehead, Motor, plastic_cover, Remark, Date, checked_by, board_serial) 
                 VALUES('$stock_id', '$tag_no', '$serial_no', '$Shutter', '$Chipset', '$Roller',
-                      '$Track', '$Prehead', '$Motor', '$plastic_cover', '$Date', '$checked_by', '$board_serial')";
+                      '$Track', '$Prehead', '$Motor', '$plastic_cover', '$Remark' , '$Date', '$checked_by', '$board_serial')";
 
         $result = mysqli_query($conn, $sql);
 
         if ($result) {
-          header("Location: ../index.php?success=Successfully created");
+          header("Location: ../Add.php?success=Successfully created");
           exit;
       } else {
-          header("Location: ../index.php?error=Failed to insert data");
+          header("Location: ../Add.php?error=Failed to insert data");
           exit;
       }
     }
 } else {
-    header("Location: ../index.php");
+    header("Location: ../Add.php");
     exit;
 }

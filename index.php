@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>CA_Managment</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
                 <label>Board Serial</label>
                 <input type="number" name="board_serial" >
                 <input type="submit" value="Create">
-
+    
 
                 <mark>
                     <?php if (isset($_GET['error'])){
@@ -61,5 +61,8 @@
             </div>
         </fieldset>
     </form>
+
+    <a href="Add.php" class="hidden-link">Go to Add Page</a>
+
 </body>
 </html>
