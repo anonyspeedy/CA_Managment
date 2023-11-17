@@ -28,7 +28,7 @@
             </div>
         </header>
         
-        <form action="php/create.php" method="post">
+        <form action="php/create.php" name="Add" method="post">
             <div class="form-elemnt my-4">
                 <lable> Stock ID</lable>
                 <select name="stock_id" class="form-control">
@@ -150,7 +150,7 @@
             </div>
 
             <div class="form-element my-4">
-                <input type="submit" name="create" value="ADD" class="btn btn-primary">
+                <input type="submit" name="Add" value="ADD" class="btn btn-primary">
             </div>
 
             <mark>
