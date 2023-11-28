@@ -1,68 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>CA_Managment</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Bootstrap Image Grid</title>
+  <style>
+    .circle {
+      border-radius: 20px; /* Adjust the border-radius value as needed */
+    }
+    
+    .mb-4 img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-    <form action="php/create.php" method="post">
-        <fieldset>
-            <legend>Reciving Check List For Card Reader</legend>
-            <div>
-                <label>Stock ID</label>
-                <input type="number" name="stock_id">
-                <label>Tag No</label>
-                <input type="number" name="tag_no">
-                <label>Serial No</label>
-                <input type="text" name="serial_no">
-                <label>Shutter</label>
-                <input type="Checkbox" name="Shutter" >
-                <label>Chipset</label>
-                <input type="Checkbox" name="Chipset" >
-                <label>Roller</label>
-                <input type="Checkbox" name="Roller" >
-                <label>Track</label>
-                <input type="Checkbox" name="Track" >
-                <label>Prehead</label>
-                <input type="Checkbox" name="Prehead" >
-                <label>Motor</label>
-                <input type="Checkbox" name="Motor" >
-                <label>Plastic Cover</label>
-                <input type="Checkbox" name="plastic_cover" >
-                <label>Date</label>
-                <input type="date" name="Date">
-                <label>Checked BY</label>
-                <input type="text" name="checked_by">
-                <label>Board Serial</label>
-                <input type="number" name="board_serial" >
-                <input type="submit" value="Create">
-    
 
-                <mark>
-                    <?php if (isset($_GET['error'])){
-                        echo $_GET['error'];
-                    } ?>
-                </mark>
-                <?php
-                        // Check for error message
-                        if (isset($_GET['error'])) {
-                            echo '<p style="color: red;">' . $_GET['error'] . '</p>';
-                        }
+<?php include("header_footer/header.php"); ?>
 
-                        // Check for success message
-                        if (isset($_GET['success'])) {
-                            echo '<p style="color: green;">' . $_GET['success'] . '</p>';
-                        }
-                        ?>
-                
-            </div>
-        </fieldset>
-    </form>
+<div class="container mt-4 circle"> <!-- Apply the "circle" class here -->
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="Add.php">
+            <img src="img/CardReader.jpg" class="img-fluid" alt="Image 1">
+        </a>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img src="img/Chipset.jpg" class="img-fluid" alt="Image 2">
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img src="img/Shutter.jpg" class="img-fluid" alt="Image 3">
+    </div>
+  </div>
+</div>
 
-    <a href="Add.php" class="hidden-link">Go to Add Page</a>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

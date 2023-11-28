@@ -10,8 +10,17 @@
         table  td, table th{
         vertical-align:middle;
         text-align:right;
-        padding:20px!important;
+        padding-top:20px!important;
+        padding-bottom: 20px!important;
+        padding-left: 10px!important;
+       
         }
+        table{
+            border-radius: 20px; /* You can adjust the value to change the border radius */
+            overflow: hidden; /* Ensures that the border-radius is applied to the table */
+    
+        }
+    
     </style>
 </head>
 <body>
@@ -70,36 +79,7 @@
 
 
           </script>
-
-
-
-
-
-        <?php
-        session_start();
-        if (isset($_SESSION["create"])) {
-        ?>
-        <div class="alert alert-success">
-            <?php 
-            echo $_SESSION["create"];
-            ?>
-        </div>
-        <?php
-        unset($_SESSION["create"]);
-        }
-        ?>
-         <?php
-        if (isset($_SESSION["update"])) {
-        ?>
-        <div class="alert alert-success">
-            <?php 
-            echo $_SESSION["update"];
-            ?>
-        </div>
-        <?php
-        unset($_SESSION["update"]);
-        }
-        ?>
+         
         <?php
         if (isset($_SESSION["delete"])) {
         ?>
@@ -153,7 +133,7 @@
                 <td><?php echo $data['Prehead']; ?></td>
                 <td><?php echo $data['Motor']; ?></td>
                 <td><?php echo $data['plastic_cover']; ?></td>
-                <td><?php echo $data['Date']; ?></td>
+                <td id="date"><?php echo date('d-m-Y', strtotime($data['Date'])); ?></td>
                 <td><?php echo $data['checked_by']; ?></td>
                 <td><?php echo $data['Remark']; ?></td>
                 <td>

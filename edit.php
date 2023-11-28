@@ -21,6 +21,22 @@
 </head>
 <body>
     <?php include("header_footer/header.php"); ?>
+    
+             <?php
+                    if (isset($_SESSION["update"])) {
+                        ?>
+                        <div class="alert alert-success">
+                            <?php
+                            echo $_SESSION["update"];
+                            ?>
+                        </div>
+                        <?php
+                        unset($_SESSION["update"]);
+                    }
+                ?>
+
+
+    
     <div class="container my-5">
         <header class="d-flex justify-content-between my-4">
             <h1>Edit Reciving Card Reader</h1>
@@ -43,6 +59,19 @@
 
                 
                 ?>
+
+                <?php
+                        if (isset($_SESSION["update"])) {
+                        ?>
+                        <div class="alert alert-success">
+                            <?php 
+                            echo $_SESSION["update"];
+                            ?>
+                        </div>
+                        <?php
+                        unset($_SESSION["update"]);
+                        }
+                        ?>
                 <form action="php/create.php" method="post">
                     <!-- Your existing form fields -->
                     <div class="form-element my-4">

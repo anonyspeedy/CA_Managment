@@ -22,6 +22,19 @@
 <?php include("header_footer/header.php"); ?>
 <div class="container my-5">
     <header class="d-flex justify-content-between my-4">
+    <?php
+        session_start();
+        if (isset($_SESSION["create"])) {
+        ?>
+        <div class="alert alert-success">
+            <?php 
+            echo $_SESSION["create"];
+            ?>
+        </div>
+        <?php
+        unset($_SESSION["create"]);
+        }
+        ?>
             <h1>Add Reciving Card Reader</h1>
             <div>
             <a href="display.php" class="btn btn-primary">Back</a>
