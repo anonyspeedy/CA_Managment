@@ -4,16 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>Bootstrap Image Grid</title>
+  <title>Home</title>
   <style>
-    .circle {
-      border-radius: 20px; /* Adjust the border-radius value as needed */
+    .button-container {
+      margin-top: 20px;
+      margin-left: 25%;
     }
-    
-    .mb-4 img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
+   
+    .circle-button {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 2px solid gray;
+      background-color: white;
+      color: #000000;
+      font-size: 24px;
+      text-align: center;
+      text-decoration: none;
+      display: flex; /* Use flex display to arrange buttons horizontally */
+      align-items: center; /* Center content vertically */
+      justify-content: center; /* Center content horizontally */
+      margin-right: 20px; /* Adjust the horizontal spacing between buttons */
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .circle-button:hover {
+      box-shadow: 0 8px 16px gray;
+      border-color: #3498db;
+      background-color: #3498db;
+      color: white;
+    }
+
+    .circle-button img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%;
     }
   </style>
 </head>
@@ -21,25 +47,33 @@
 
 <?php include("header_footer/header.php"); ?>
 
-<div class="container mt-4 circle"> <!-- Apply the "circle" class here -->
-  <div class="row">
-    <div class="col-lg-4 col-md-6 mb-4">
-        <a href="Add.php">
-            <img src="img/CardReader.jpg" class="img-fluid" alt="Image 1">
-        </a>
+<div class="button-container">
+  <div class="d-flex">
+    <div class="mr-3">
+        <a href="Add.php" class="circle-link">
+          <button class="circle-button">
+            <img src="./img/CardReader.png" alt="CardReader"/>
+          </button>
+      </a>
+
     </div>
-    <div class="col-lg-4 col-md-6 mb-4">
-      <img src="img/Chipset.jpg" class="img-fluid" alt="Image 2">
+    <div class="mr-3">
+      <button class="circle-button">
+        <img src="./img/Shutter.png" alt="Shutter">
+      </button>
     </div>
-    <div class="col-lg-4 col-md-6 mb-4">
-      <img src="img/Shutter.jpg" class="img-fluid" alt="Image 3">
+    <div class="mr-3">
+      <button class="circle-button">
+        <img src="./img/Chipset.png" alt="Chipset">
+      </button>
+    </div>
+    <div>
+      <button class="circle-button">
+        <img src="./img/Board.png" alt="Board">
+      </button>
     </div>
   </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
