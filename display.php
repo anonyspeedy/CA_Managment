@@ -11,10 +11,10 @@
     <style>
         table  td, table th{
         vertical-align:middle;
-        text-align:right;
+        text-align:center;
         padding-top:20px!important;
         padding-bottom: 20px!important;
-        padding-left: 10px!important;
+        padding-left: 0px!important;
         
         }
         table{
@@ -23,7 +23,16 @@
             width: max-content;
     
         }
-    
+        #live_search{
+            width: 300px; 
+            height: 40px;
+            margin-left: 1006px; 
+            margin-bottom: 10px;
+            display: flexbox;
+        }
+        .export{
+            display: flex;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +52,7 @@ include("import_export/export.php"); // Include the export file
             </div>
         </header>
         <div class="row">
-            <form action="import_export/export.php" method="post">
+            <form action="import_export/export.php" method="post" class="export">
             
             <input type="date" class="form-control form-control-sm" placeholder="Search..." name="start_date" style="width: 200px;">
 
@@ -72,7 +81,7 @@ include("import_export/export.php"); // Include the export file
             </script>
         
                 
-        <input type="text" class="form-control form-control-sm" id="live_search" autocomplete="off" placeholder="Search..." style="width: 200px; margin-left: 1000px; margin-bottom: 20px;">
+        <input type="text" class="form-control form-control-sm" id="live_search" autocomplete="off" placeholder="Search...">
 
 
           <div id="searchresult"></div>
