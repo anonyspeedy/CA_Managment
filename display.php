@@ -15,11 +15,12 @@
         padding-top:20px!important;
         padding-bottom: 20px!important;
         padding-left: 10px!important;
-       
+        
         }
         table{
             border-radius: 20px; /* You can adjust the value to change the border radius */
             overflow: hidden; /* Ensures that the border-radius is applied to the table */
+            width: max-content;
     
         }
     

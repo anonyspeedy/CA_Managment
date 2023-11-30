@@ -7,35 +7,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy5q+V0TR5Oq7Jq5Lq2rwX6K+xWn2I1S" crossorigin="anonymous">
     <title>Your Website Title</title>
     <style>
-        body {
-            padding-top: 156px; /* Adjusted for fixed navbar */
-        }
+        body {padding-top: 56px;}
+
+            .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            }
+
+            .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+            .navbar a:hover {
+            background: #ddd;
+            color: black;
+            }
+
+            
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">CA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="../CA_Managment/index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../CA_Managment/display.php">Lists</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../CA_Managment/Add.php">Add Reciving</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
+    <div class="navbar">
+    
+      <a href="../CA_Managment/index.php">Home</a>
+      <a href="../CA_Managment/Add.php">Add</a>
+      <a href="../CA_Managment/display.php">List</a>
+      <a href="#contact">Contact</a>
     </div>
-</nav>
+    
 
 <!-- Content starts here -->
 </body>

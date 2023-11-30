@@ -41,11 +41,13 @@
       max-height: 100%;
       border-radius: 50%;
     }
+   
   </style>
 </head>
 <body>
 
 <?php include("header_footer/header.php"); ?>
+
 
 <div class="button-container">
   <div class="d-flex">
@@ -55,7 +57,6 @@
             <img src="./img/CardReader.png" alt="CardReader"/>
           </button>
       </a>
-
     </div>
     <div class="mr-3">
       <button class="circle-button">
