@@ -68,10 +68,12 @@
                             <td><?php echo $Date;?></td>
                             <td><?php echo $checked_by;?></td>
                             <td><?php echo $Remark;?></td>
+                            
                             <td>
-                                <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-                                <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                                <a href="edit.php?id=<?php echo $id; ?>" class="btn btn-warning">Edit</a>
+                                <a href="delete.php?id=<?php echo $id; ?>" class="btn btn-danger">Delete</a>
                             </td>
+ 
                         </tr>
                         <?php
 
