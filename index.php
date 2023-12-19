@@ -69,9 +69,11 @@
       </button>
     </div>
     <div>
-      <button class="circle-button">
-        <img src="./img/Board.png" alt="Board">
-      </button>
+      <a href="board/b_reciving.php" class="circle-link">
+        <button class="circle-button">
+          <img src="./img/Board.png" alt="Board">
+        </button>
+      </a>
     </div>
   </div>
 </div>
