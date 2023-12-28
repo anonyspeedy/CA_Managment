@@ -37,7 +37,9 @@
         ?>
             <h1>Add Reciving Card Reader</h1>
             <div>
-            <a href="display.php" class="btn btn-primary">Back</a>
+            <a href="index.php" class="btn btn-primary">Back</a>
+            
+            <a href="display.php" class="btn btn-primary">list</a>
             </div>
         </header>
         
@@ -45,11 +47,9 @@
             <div class="form-elemnt my-4">
                 <lable> Stock ID</lable>
                 <select name="stock_id" class="form-control">
-                    <option value="" >Select Stock ID:</option>
+                    
                     <option value="37">Card Reader: 37</option>
-                    <option value="34">Chipset: 34</option>
-                    <option value="128">Board: 128</option>
-                    <option value="420">Shutter: 420</option>
+                    
                 </select>
             </div>
             <div class="form-elemnt my-4">

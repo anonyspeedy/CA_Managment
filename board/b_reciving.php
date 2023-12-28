@@ -19,7 +19,7 @@
 
 </head>
 <body>
-<?php include("../header_footer/header.php"); ?>
+<?php include("../header_footer/b_header.php"); ?>
 <div class="container my-5">
     <header class="d-flex justify-content-between my-4">
     <?php
@@ -37,7 +37,9 @@
         ?>
             <h1>Add Reciving Card Reader</h1>
             <div>
-            <a href="b_display.php" class="btn btn-primary">Back</a>
+            <a href="../index.php" class="btn btn-primary">Back</a>
+            <a href="b_display.php" class="btn btn-primary">list</a>
+
             </div>
         </header>
         
@@ -46,7 +48,7 @@
                 <lable> Stock ID</lable>
                 <select name="stock_id" class="form-control">
 
-                    <option value="128">Board: 128</option>
+                    <option value="328">Board: 328</option>
                     
                 </select>
             </div>
@@ -72,14 +74,14 @@
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="status" id="radioMaintainable" value="maintainable">
+                <input class="form-check-input" type="radio" name="status" id="radioMaintainable" value="maintainable" checked>
                 <label class="form-check-label" for="radioMaintainable">
                     Maintainable
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="status" id="radioDamage" value="damage" checked>
+                <input class="form-check-input" type="radio" name="status" id="radioDamage" value="damage" >
                 <label class="form-check-label" for="radioDamage">
                     Damage
                 </label>

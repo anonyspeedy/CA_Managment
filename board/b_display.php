@@ -40,19 +40,19 @@
 
 
 <?php 
-include("../header_footer/header.php"); 
-include("../import_export/export.php"); // Include the export file
+include("../header_footer/b_header.php"); 
+include("../import_export/b_export.php"); // Include the export file
 
 ?>
     <div class="container my-4">
         <header class="d-flex justify-content-between my-4">
-            <h1>Card Reader Board List</h1>
+            <h1>Board List</h1>
             <div>
                 <a href="b_reciving.php" class="btn btn-primary">New Reciving Iteam</a>
             </div>
         </header>
         <div class="row">
-            <form action="import_export/export.php" method="post" class="export">
+            <form action="../import_export/export.php" method="post" class="export">
             
             <input type="date" class="form-control form-control-sm" placeholder="Search..." name="start_date" style="width: 200px;">
 
@@ -164,8 +164,8 @@ include("../import_export/export.php"); // Include the export file
                 
                 <td>
                     
-                    <a href="../edit.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-                    <a href="../delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                    <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                    <a href="delete.php?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             <?php

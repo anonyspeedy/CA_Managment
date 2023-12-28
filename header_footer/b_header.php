@@ -39,21 +39,9 @@
 
     <div class="navbar">
     
-      <a href="../CA_Managment/index.php">Home</a>
-
-      <div class="dropdown">
-            <a class="dropdown-toggle" href="#" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Add
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="../CA_Managment/Add.php">Add Card Reader</a>
-                <a class="dropdown-item" href="#">Add Board</a>
-                <a class="dropdown-item" href="#">Add Shutter</a>
-                <a class="dropdown-item" href="#">Add Chipset</a>
-            </div>
-        </div>
-      
-      <a href="../CA_Managment/display.php">List</a>
+      <a href="../index.php">Home</a>
+      <a href="../Add.php">Add</a>
+      <a href="../display.php">List</a>
       <a href="#contact">Contact</a>
     </div>
     

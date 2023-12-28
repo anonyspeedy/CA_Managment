@@ -176,7 +176,15 @@
                         <input type="text" class="form-control" name="board_serial" placeholder="Serial Number:" value="<?php echo $data['board_serial']; ?>">
                     </div>
 
-                    
+                    <div class="form-elemnt my-4">
+                        <label>Remark</label>
+                        <input type="text" class="form-control" name="Remark" placeholder="Remark:" value="<?php echo $data['Remark']; ?>">
+                    </div>
+
+                    <div class="form-elemnt my-4">
+                        <label>Date</label>
+                        <input type="text" class="form-control" name="Date" " value="<?php echo $data['Date']; ?>">
+                    </div> 
 
                     <div class="form-element my-4">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
