@@ -1,0 +1,7 @@
+CREATE TABLE c_reciving (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    stock_id INT NOT NULL,
+    tag_no INT NOT NULL,
+    Date DATE NOT NULL,
+    Remark TEXT NOT NULL
+);

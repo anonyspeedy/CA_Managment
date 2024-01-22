@@ -11,19 +11,19 @@ if (isset($_POST["export"])) {
     } else if (empty($_POST["end_date"])) {
         $end_date_error = '<label class="text-danger">End Date is required</label>';
     } else {
-        $file_name = 'BoardRecived_Data.csv';
+        $file_name = 'ChipsetRecived_Data.csv';
         header("Content-Description: File Transfer");
         header("Content-Disposition: attachment; filename=$file_name");
         header("Content-Type: application/csv;");
 
         $file = fopen('php://output', 'w');
 
-        $header = array("Stock_ID", "Tag_no", "Board Serial", "Date", "Remark", "status");
+        $header = array("Stock_ID", "Tag_no", "Date", "Remark");
 
         fputcsv($file, $header);
 
         $query = "
-        SELECT * FROM b_reciving 
+        SELECT * FROM c_reciving 
         WHERE Date >= ? 
         AND Date <= ? 
         ORDER BY Date DESC
@@ -41,11 +41,8 @@ if (isset($_POST["export"])) {
             $data = array(
                 $row["stock_id"],
                 $row["tag_no"],
-                $row["board_serial"],
                 $row["Date"],
                 $row["Remark"],
-                $row["status"]
-                
             );
             fputcsv($file, $data);
         }
@@ -55,6 +52,6 @@ if (isset($_POST["export"])) {
     }
 }
 
-$query = "SELECT * FROM b_reciving ORDER BY Date DESC";
+$query = "SELECT * FROM c_reciving ORDER BY Date DESC";
 $result = $conn->query($query);
 ?>

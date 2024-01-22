@@ -2,7 +2,7 @@
 // fetch_data.php - Fetch data from the database
 include "db_conn.php";
 
-$sql = "SELECT * FROM b_reciving";
+$sql = "SELECT * FROM c_reciving";
 $result = $conn->query($sql);
 
 $data = array();
